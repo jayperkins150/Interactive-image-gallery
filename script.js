@@ -1,4 +1,4 @@
-function addImage = {
+function addImage() {
     const addImage = document.getElementById("imageFrame").value;
     if ("imageInput") {
         const gallery = document.getElementById("gallery");
@@ -25,7 +25,7 @@ function addImage = {
         gallery.appendChild(galleryItem);
 
         // Clear the input field
-        document.getElementById("imageInput".value = "";)
+        document.getElementById("imageInput").value = "";
 
     } else {
         alert("Please enter a valid image URL");
