@@ -1,6 +1,6 @@
 function addImage() {
-    const addImage = document.getElementById("imageFrame").value;
-    if ("imageInput") {
+    const addImage = document.getElementById("imageInput").value;
+    if (imageUrl && imageUrl.trim()) {
         const gallery = document.getElementById("gallery");
 
         // Create new gallery input div
@@ -9,7 +9,7 @@ function addImage() {
 
         // Create new image for the gallery and assign it a source
         const img = document.createElement("img");
-        img.src = imageFrame;
+        img.src = addImage;
 
         // Create remove image button
         const removeButton = document.createElement("button");
@@ -30,7 +30,7 @@ function addImage() {
     } else {
         alert("Please enter a valid image URL");
     }
-
-    // Add event listener to the image input button
-    document.getElementById("addImageButton").addEventListener("click", addImage);
 }
+
+// Add event listener to the image input button
+document.getElementById("addImageButton").addEventListener("click", addImage);

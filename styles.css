@@ -17,8 +17,7 @@ body {
         }
 
         .gallery-item img {
-            max-width: 200px;
-            max-height: 200px;
+            max-width: 100%;
             cursor: pointer;
             transition: transform 0.2s;
         }
