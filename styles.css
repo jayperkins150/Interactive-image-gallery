@@ -1,43 +1,57 @@
+/* Reset and base styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  background-color: #fafafa;
 }
 
+/* Gallery container */
 #gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
-        .gallery-item {
-            position: relative;
-            margin: 10px;
-        }
+/* Each image wrapper */
+.gallery-image {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
 
-        .gallery-item img {
-            max-width: 100%;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
+/* Image styling */
+.gallery-image img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-        .gallery-item img:hover {
-            transform: scale(1.1);
-        }
+.gallery-image img:hover {
+  transform: scale(1.05);
+}
 
-        .remove-button {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-            display: none;
-        }
+/* Remove image button */
+.remove-image {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: none;
+}
 
-        .gallery-item:hover .remove-button {
-            display: block;
-        }
+/* Show button on hover */
+.gallery-image:hover .remove-image {
+  display: block;
+}

@@ -1,5 +1,5 @@
 function addImage() {
-    const addImage = document.getElementById("imageInput").value;
+    const imageUrl = document.getElementById("imageInput").value;
     if (imageUrl && imageUrl.trim()) {
         const gallery = document.getElementById("gallery");
 
@@ -7,22 +7,23 @@ function addImage() {
         const galleryItem = document.createElement("div");
         galleryItem.classList.add("gallery-image");
 
-        // Create new image for the gallery and assign it a source
+        // Create new image for the gallery
         const img = document.createElement("img");
-        img.src = addImage;
+        img.src = imageUrl;
+	img.alt = "User added image";
 
         // Create remove image button
         const removeButton = document.createElement("button");
         removeButton.textContent = "Remove image";
-        removeButton.classList = "remove-image";
+        removeButton.classList.add("remove-image");
         removeButton.onclick = () => gallery.removeChild(galleryItem);
 
-        // Append the gallery image and remove image button to the gallery item
+        // Append the gallery image and remove image button to gallery item
         galleryItem.appendChild(img);
         galleryItem.appendChild(removeButton);
 
         // Append the gallery item to the gallery
-        gallery.appendChild(galleryItem);
+        gallery.prepend(galleryItem);
 
         // Clear the input field
         document.getElementById("imageInput").value = "";

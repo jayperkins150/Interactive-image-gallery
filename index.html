@@ -2,18 +2,21 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width" initial-scale="1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Interactive Image Gallery</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h1>Interactive Image Gallery</h1>
-        <input type="text" id="imageInput" placeholder="Please enter an image URL">
-        <button id="addImageButton" onClick="addImage()">Add image</button>
+        <div style="margin: 20px">
+            <h1>Interactive Image Gallery</h1>
+            <input type="text" id="imageInput" placeholder="Please enter an image URL">
+            <button id="addImageButton" onclick="addImage()">Add image</button>
+	    </div>
+        <br><br>
         <div id="gallery">
-            <img class="image" src="img1.jpg">
-            <img class="image" src="img2.jpg">
-            <img class="image" src="img3.jpg">
+            <img src="img1.jpg" alt="Image 1">
+            <img src="img2.jpg" alt="Image 2">
+            <img src="img3.jpg" alt="Image 3">
         </div>
         <script src="script.js"></script>
     </body>
